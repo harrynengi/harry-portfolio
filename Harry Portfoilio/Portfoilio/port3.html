@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Harry Tamunonengiye-ofori Sunday</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;line-height:1.6;color:#1e293b;background:#f8fafc;transition:background 0.4s,color 0.4s}
+    a{text-decoration:none;color:inherit}
+    header{padding:60px 20px 40px;text-align:center;background:linear-gradient(135deg,#0f172a,#1e293b);color:#f1f5f9;position:relative;overflow:hidden}
+    header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 40% 20%,rgba(56,189,248,0.2),transparent 70%);z-index:0}
+    header h1{font-size:36px;font-weight:700;position:relative;z-index:1}
+    header p{margin-top:6px;color:#94a3b8;position:relative;z-index:1}
+    nav{display:flex;justify-content:center;gap:24px;margin-top:20px;z-index:1;position:relative}
+    nav a{color:#f1f5f9;font-weight:500;position:relative;padding-bottom:4px}
+    nav a::after{content:"";position:absolute;left:0;bottom:0;width:0%;height:2px;background:#38bdf8;transition:width 0.3s}
+    nav a:hover::after{width:100%}
+    section{max-width:1000px;margin:60px auto;padding:0 20px;opacity:0;transform:translateY(40px);transition:opacity 0.8s ease,transform 0.8s ease}
+    section.visible{opacity:1;transform:translateY(0)}
+    section h2{font-size:28px;margin-bottom:16px;color:#0f172a;border-left:4px solid #38bdf8;padding-left:10px}
+    section p{margin-bottom:12px;color:#475569}
+    .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+    .skill{padding:16px;border:1px solid #e2e8f0;border-radius:10px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform 0.3s,box-shadow 0.3s}
+    .skill:hover{transform:translateY(-6px);box-shadow:0 6px 18px rgba(0,0,0,0.1)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .project{border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s}
+    .project:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.12)}
+    .project img{width:100%;height:180px;object-fit:cover}
+    .project-body{padding:16px}
+    .project-body h3{margin-bottom:8px;color:#0f172a}
+    .cv-button{display:inline-block;margin-top:10px;padding:10px 18px;background:#38bdf8;color:#0f172a;font-weight:600;border-radius:6px;box-shadow:0 4px 10px rgba(0,0,0,0.2);transition:background 0.3s,transform 0.3s}
+    .cv-button:hover{background:#0ea5e9;transform:scale(1.05)}
+    footer{text-align:center;padding:24px;background:#f1f5f9;color:#475569;margin-top:60px}
+    .toggle-style{position:fixed;bottom:20px;right:20px;padding:10px 16px;background:#38bdf8;color:#0f172a;font-weight:600;border:none;border-radius:6px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.25);transition:transform 0.3s;z-index:999}
+    .toggle-style:hover{transform:scale(1.05)}
+    body.stylish{background:#0f172a;color:#f1f5f9}
+    body.stylish header{background:linear-gradient(135deg,#1e293b,#0f172a)}
+    body.stylish section h2{color:#38bdf8}
+    body.stylish section p{color:#cbd5e1}
+    body.stylish .skill,body.stylish .project{background:#1e293b;border:none;color:#e2e8f0}
+    body.stylish footer{background:#1e293b;color:#94a3b8}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Harry Tamunonengiye-ofori Sunday</h1>
+    <p>Aspiring Software Engineer • Web Developer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#training">Training</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! My name is <strong>Harry Tamunonengiye-ofori Sunday</strong>, a student of <strong>Babcock University</strong> studying under the School of Computing and Engineering Sciences. I am passionate about software engineering, web development, and continuous learning. During my internship (SIWES) at <strong>NIIT Port Harcourt</strong>, I gained practical experience in web development, networking, Python programming, and GUI app creation. My goal is to design efficient, user-friendly, and secure digital solutions that make a positive impact.</p>
+    <a href="Harry_Tamunonengiye-ofori_Sunday_Improved_CV.pdf" target="_blank" class="cv-button">📄 View My CV</a>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML5, CSS3, JavaScript</div>
+      <div class="skill">Responsive Design (Flexbox, Grid)</div>
+      <div class="skill">Python Programming (Tkinter GUI)</div>
+      <div class="skill">C, C++, Java, VB.NET</div>
+      <div class="skill">Microsoft Excel & PowerPoint (3D Presentations)</div>
+      <div class="skill">Database Creation & Retrieval (PowerShell, SQL)</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://via.placeholder.com/400x180?text=Portfolio+Website" alt="Portfolio Website">
+        <div class="project-body">
+          <h3>Personal Portfolio</h3>
+          <p>A responsive website showcasing my profile, skills, and projects. Built with HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x180?text=GUI+App" alt="GUI App">
+        <div class="project-body">
+          <h3>GUI To-Do List (Python)</h3>
+          <p>Desktop app created with Tkinter for creating, saving, and managing daily tasks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research & Academic Work</h2>
+    <p><strong>Response Time Optimization in Healthcare Centers</strong> — Conducted a study on delays caused by manual patient card retrieval systems. Proposed a model-driven software engineering approach for faster data access and improved healthcare efficiency.</p>
+    <p><strong>Problem Representation using Visual Diagrams</strong> — Created multiple system and process diagrams to represent real-world software solutions effectively.</p>
+  </section>
+
+  <section id="training">
+    <h2>Internship & Training</h2>
+    <p><strong>NIIT Port Harcourt (June – September 2024)</strong></p>
+    <ul>
+      <li>Hands-on experience with Microsoft Office, networking, and web development fundamentals.</li>
+      <li>Worked with Python scripting and database creation in PowerShell.</li>
+      <li>Participated in GUI application development using Tkinter.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you’d like to collaborate, learn more about my work, or discuss opportunities, feel free to reach out.</p>
+    <p><strong>Email:</strong> <a href="mailto:tammyharry13@gmail.com">tammyharry13@gmail.com</a></p>
+    <p><strong>Phone:</strong> +234 915 077 8418</p>
+    <p><strong>Location:</strong> Port Harcourt, Rivers State, Nigeria</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Harry Tamunonengiye-ofori Sunday. All rights reserved.</p>
+  </footer>
+
+  <button class="toggle-style" id="toggleStyle">Switch Theme</button>
+
+  <script>
+    const body = document.body;
+    const toggleBtn = document.getElementById('toggleStyle');
+    if(localStorage.getItem('theme')==='dark'){body.classList.add('stylish');}
+    toggleBtn.addEventListener('click',()=>{body.classList.toggle('stylish');localStorage.setItem('theme',body.classList.contains('stylish')?'dark':'light');});
+    const sections=document.querySelectorAll('section');
+    const revealOnScroll=()=>{sections.forEach(s=>{const r=s.getBoundingClientRect();if(r.top<window.innerHeight-100){s.classList.add('visible');}})};
+    window.addEventListener('scroll',revealOnScroll);
+    window.addEventListener('load',revealOnScroll);
+  </script>
+</body>
+</html>

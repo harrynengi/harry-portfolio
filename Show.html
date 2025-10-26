@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Development Showcase — HTML • CSS • JavaScript</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#06b6d4; --muted:#94a3b8; --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#071023 0%, #071b2a 100%); color:#e6eef6;}
+    .wrap{max-width:1100px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:16px}
+    .brand{display:flex;flex-direction:column}
+    .title{font-size:28px;font-weight:700;letter-spacing:-0.3px}
+    .subtitle{color:var(--muted);font-size:13px}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:24px}
+    .main{background:linear-gradient(180deg,var(--card), rgba(7,16,28,0.75));padding:22px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+    .aside{padding:18px;background:linear-gradient(180deg,var(--glass),var(--glass-2));border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+
+    h2{margin:6px 0 12px}
+    p.lead{color:var(--muted);margin-top:0}
+
+    .section{background:rgba(255,255,255,0.02);padding:16px;border-radius:10px;margin-bottom:14px}
+    .flex-row{display:flex;gap:12px;align-items:flex-start}
+    .chip{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    pre{background:#041226;padding:12px;border-radius:8px;overflow:auto;color:#d7f9ff}
+    code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;font-size:13px}
+
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));padding:14px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+
+    .projects{display:flex;flex-direction:column;gap:10px}
+
+    /* small interactive widgets */
+    .calc{display:flex;flex-direction:column;gap:8px}
+    .calc input{padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+    .btn{padding:8px 10px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#8be3ff);color:#00121a;border:none;cursor:pointer}
+
+    .slider{position:relative;overflow:hidden;border-radius:8px}
+    .slides{display:flex;transition:transform .5s ease}
+    .slide{min-width:100%;padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;align-items:center;gap:12px}
+    .thumb{width:120px;height:80px;border-radius:6px;background:#082134;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px}
+
+    .todo{display:flex;flex-direction:column;gap:8px}
+    .todo input{padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+    .list{display:flex;flex-direction:column;gap:6px}
+    .list-item{padding:8px;background:rgba(255,255,255,0.02);border-radius:6px;display:flex;justify-content:space-between}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:920px){.grid{grid-template-columns:1fr} .aside{order:2}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="title">Web Development Showcase</div>
+        <div class="subtitle">HTML • CSS • JavaScript — NIIT Port Harcourt</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="main">
+        <section class="section">
+          <h2>Overview</h2>
+          <p class="lead">This single-page demonstration highlights the areas I covered during my SIWES at <strong>NIIT, Port Harcourt</strong>: <em>HTML structure</em>, <em>CSS styling (Flexbox & Grid)</em>, and <em>JavaScript interactivity</em>. The examples below are interactive—try the calculator, image slider, and the to‑do list. A screenshot of this page will capture all the points for your report.</p>
+        </section>
+
+        <section class="section">
+          <h2>HTML (Structure)</h2>
+          <div class="flex-row">
+            <div style="flex:1">
+              <p>I used semantic HTML elements to create well-structured content. Examples include <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>. Proper document structure improves accessibility and SEO.</p>
+              <pre><code>&lt;section&gt;
+  &lt;h2&gt;Projects&lt;/h2&gt;
+  &lt;article&gt;...&lt;/article&gt;
+&lt;/section&gt;</code></pre>
+            </div>
+            <div class="chip">Semantic tags</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>CSS (Design & Styling)</h2>
+          <p class="lead">Styling includes responsive layouts using Flexbox and Grid, typographic scale, spacing, and color systems. The page below demonstrates a two-column grid and flexible components that collapse on smaller screens.</p>
+          <div class="cards" style="margin-top:12px">
+            <div class="card">
+              <strong>Flexbox Example</strong>
+              <p class="muted">Used for nav, card grids and alignment.</p>
+              <pre><code>display:flex;
+justify-content:space-between;
+align-items:center;</code></pre>
+            </div>
+            <div class="card">
+              <strong>Grid Example</strong>
+              <p class="muted">Useful for magazine-style and responsive layouts.</p>
+              <pre><code>display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>JavaScript (Interactivity)</h2>
+          <p>I implemented DOM manipulation, event handling and small projects below to demonstrate practical skills: a calculator (logic & events), an image slider (state & transitions), and a to-do list (CRUD with local state).</p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+            <div class="card calc">
+              <strong>Mini Calculator</strong>
+              <input id="calc-a" type="number" placeholder="First number" />
+              <input id="calc-b" type="number" placeholder="Second number" />
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="calcOp('add')">Add</button>
+                <button class="btn" onclick="calcOp('sub')">Sub</button>
+                <button class="btn" onclick="calcOp('mul')">Mul</button>
+                <button class="btn" onclick="calcOp('div')">Div</button>
+              </div>
+              <div style="margin-top:8px">Result: <span id="calc-res">—</span></div>
+            </div>
+
+            <div class="card">
+              <strong>Image Slider (Projects)</strong>
+              <div class="slider" style="margin-top:8px">
+                <div class="slides" id="slides">
+                  <div class="slide"><div class="thumb">Portfolio</div><div><h4>Personal Portfolio</h4><p>Responsive portfolio showcasing projects, skills and contact form.</p></div></div>
+                  <div class="slide"><div class="thumb">E‑Commerce</div><div><h4>E‑commerce Product Page</h4><p>Product display with gallery, filters and cart simulation.</p></div></div>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;margin-top:8px"><button class="btn" onclick="slide(-1)">Prev</button><button class="btn" onclick="slide(1)">Next</button></div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px" class="card">
+            <strong>To‑Do List (Interactive)</strong>
+            <div class="todo">
+              <input id="todo-input" placeholder="Add a task and press Add" />
+              <div style="display:flex;gap:8px;margin-top:6px"><button class="btn" onclick="addTodo()">Add</button><button class="btn" onclick="clearTodos()">Clear</button></div>
+              <div class="list" id="todo-list" style="margin-top:8px"></div>
+            </div>
+          </div>
+
+        </section>
+
+        <footer>Ready for a screenshot — this page summarizes HTML, CSS & JS skills practiced during SIWES at NIIT Port Harcourt.</footer>
+      </main>
+
+      <aside class="aside">
+        <h3>Quick Reference</h3>
+        <p class="lead">What to capture in your screenshot:</p>
+        <ul>
+          <li>Semantic HTML examples</li>
+          <li>CSS Flexbox & Grid snippets</li>
+          <li>JS interactive widgets: Calculator, Slider, To‑Do</li>
+          <li>Project descriptions (Portfolio, E‑commerce)</li>
+        </ul>
+
+        <div style="height:12px"></div>
+        <div class="section">
+          <h4>Notes for report</h4>
+          <p class="muted">Use this page as evidence of practical skills in your SIWES report. A single screenshot will capture the core learning outcomes visually.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    // Calculator
+    function calcOp(op){
+      const a = parseFloat(document.getElementById('calc-a').value) || 0;
+      const b = parseFloat(document.getElementById('calc-b').value) || 0;
+      let r = '—';
+      if(op==='add') r = a + b;
+      if(op==='sub') r = a - b;
+      if(op==='mul') r = a * b;
+      if(op==='div') r = b===0? 'Err' : (a / b).toFixed(3);
+      document.getElementById('calc-res').textContent = r;
+    }
+
+    // Slider
+    let idx = 0;
+    const slides = document.getElementById('slides');
+    function renderSlides(){ slides.style.transform = `translateX(${ -idx * 100 }%)`; }
+    function slide(dir){ idx += dir; if(idx < 0) idx = 0; if(idx > 1) idx = 1; renderSlides(); }
+
+    // To‑Do
+    const listEl = document.getElementById('todo-list');
+    function addTodo(){ const v = document.getElementById('todo-input').value.trim(); if(!v) return; const item = document.createElement('div'); item.className='list-item'; item.innerHTML = `<span>${escapeHtml(v)}</span><button class='btn' onclick='this.parentNode.remove()'>Done</button>`; listEl.prepend(item); document.getElementById('todo-input').value=''; }
+    function clearTodos(){ listEl.innerHTML=''; }
+    function escapeHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    // initial
+    renderSlides();
+  </script>
+</body>
+</html>

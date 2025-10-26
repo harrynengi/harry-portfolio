@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-box">
+            <div class="header">
+                <h2>Payment Details</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="amount">
+                <span>Amount</span>
+                <h1>$170.00</h1>
+                <button class="tax-btn">Tax $5.75</button>
+            </div>
+
+            <label for="customer">Customer</label>
+            <select id="customer">
+                <option>Leslie Alexander</option>
+            </select>
+
+            <div class="row">
+                <div class="column">
+                    <label>Customer ID</label>
+                    <input type="text" value="Leslie Alexander" disabled>
+                </div>
+                <div class="column">
+                    <label>Routing Number</label>
+                    <input type="text" value="#583404" disabled>
+                </div>
+            </div>
+
+            <label>Address</label>
+            <input type="text" value="3146 Sunset Drive" disabled>
+
+            <div class="row">
+                <div class="column">
+                    <label>City</label>
+                    <input type="text" value="Jonesboro" disabled>
+                </div>
+                <div class="column">
+                    <label>State</label>
+                    <input type="text" value="AR" disabled>
+                </div>
+            </div>
+
+            <label>Zipcode</label>
+            <input type="text" value="72401" disabled>
+
+            <div class="buttons">
+                <button class="cancel">Cancel</button>
+                <button class="continue">Continue</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
