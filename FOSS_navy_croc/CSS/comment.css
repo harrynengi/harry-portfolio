@@ -1,0 +1,148 @@
+.navbar {
+    background: #0073e6;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    top: 0;
+    left: 0;
+}
+
+.nav-left .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+    color: #d4e9ff;
+}
+
+
+/* BODY & RATING BOX */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(120deg, #e0f3ff, #cfe8ff);
+  min-height: 100vh;
+}
+
+.rating-box {
+  max-width: 500px;
+  width: 90%;
+  background: white;
+  margin: 50px auto;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.rating-box h2 {
+  color: #005bb5;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.rating-box select,
+.rating-box input,
+.rating-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border 0.3s ease;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.rating-box select {
+  cursor: pointer;
+  background: white;
+}
+
+.rating-box textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.rating-box select:focus,
+.rating-box input:focus,
+.rating-box textarea:focus {
+  border-color: #0073e6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 115, 230, 0.1);
+}
+
+.rating-box button {
+  width: 100%;
+  padding: 12px;
+  background: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.rating-box button:hover {
+  background: #005bb5;
+  transform: translateY(-2px);
+}
+
+.rating-box button:active {
+  transform: translateY(0);
+}
+
+/* Star Rating Display */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.star-rating i {
+  font-size: 28px;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.star-rating i.active,
+.star-rating i:hover {
+  color: #ffd700;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.success {
+  color: #27ae60;
+  padding: 10px;
+  background: #d4edda;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: none;
+}
